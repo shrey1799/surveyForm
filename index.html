@@ -1,124 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Form</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <h1 id="title">
-            jockey academy survey form
-        </h1>
-        <p id="description">
-            Horses lend us the wings we lack.
-        </p>
-        <form id="survey-form">
-            <div>
-                <section id="section-1">
-
-                    <div class="form-container">
-                        <input autocomplete="off" class="input" id="name-label" type="text" required>
-                        <label class="label" for="name-label">
-                            <span class="span"> Name </span>
-                        </label>
-                    </div>
-
-                    <div class="form-container">
-                        <input autocomplete="off" class="input" id="name-label" type="text" required>
-                        <label class="label" for="name-label">
-                            <span class="span"> Email </span>
-                        </label>
-                    </div>
-
-                    <div class="form-container">
-                        <input autocomplete="off" class="input" id="name-label" type="number" required>
-                        <label class="label" for="name-label">
-                            <span class="span"> Age(optional) </span>
-                        </label>
-                    </div>
-
-
-                    <section id="section-2">
-                        <p>Membership we offer at our academy</p>
-
-                        <div class="spacing">
-                            <input type="radio" name="membership" id="year">
-                            <label class="inline" for="year">yearly</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="radio" name="membership" id="half-year">
-                            <label class="inline" for="half-year">half-year</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="radio" name="membership" id="quater">
-                            <label class="inline" for="quater">quaterly</label>
-                        </div>
-
-                    </section>
-
-                    <section id="section-3">
-                        <p>skills we offer here at our academy</p>
-                        <div class="spacing">
-                            <input type="checkbox" name="whatMore" id="rider-1">
-                            <label class="inline" for="rider-1">rider-1</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="checkbox" name="whatMore" id="rider-2">
-                            <label class="inline" for="rider-2">rider-2</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="checkbox" name="whatMore" id="rider-3">
-                            <label class="inline" for="rider-2">rider-3</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="checkbox" name="whatMore" id="rider-4">
-                            <label class="inline" for="rider-2">rider-4</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="checkbox" name="whatMore" id="rider-5">
-                            <label class="inline" for="rider-2">rider-5</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="checkbox" name="whatMore" id="rider-6">
-                            <label class="inline" for="rider-2">rider-6</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="checkbox" name="whatMore" id="rider-7">
-                            <label class="inline" for="rider-2">rider-7</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="checkbox" name="whatMore" id="rider-8">
-                            <label class="inline" for="rider-2">rider-8</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="checkbox" name="whatMore" id="rider-9">
-                            <label class="inline" for="rider-2">rider-9</label>
-                        </div>
-
-                        <div class="spacing">
-                            <input type="checkbox" name="whatMore" id="rider-10">
-                            <label class="inline" for="rider-2">rider-10</label>
-                        </div>
-
-                    </section>
-                    <button class="submit">Submit</button>
+      <h1 id="title">
+        jockey academy survey form
+      </h1>
+      <p id="description">
+        Horses lend us the wings we lack.
+      </p>
+      <form id="survey-form">
+        <div>
+          <section id="section-1">
+            <div class="form-container">
+              <input
+                placeholder="name"
+                autocomplete="off"
+                class="input"
+                id="name"
+                type="text"
+                required
+              />
+              <label id="name-label" class="label" for="name">
+                <span class="span"> Name </span>
+              </label>
             </div>
-        </form>
-    </main>
-</body>
 
+            <div class="form-container">
+              <input
+                placeholder="email"
+                autocomplete="off"
+                class="input"
+                id="email"
+                type="email"
+                required
+              />
+              <label id="email-label" class="label" for="email">
+                <span class="span"> Email </span>
+              </label>
+            </div>
+
+            <div class="form-container">
+              <input
+                placeholder="age"
+                autocomplete="off"
+                class="input"
+                id="number"
+                type="number"
+                min="1"
+                max="10"
+                required
+              />
+              <label id="number-label" class="label" for="number">
+                <span class="span"> Age </span>
+              </label>
+            </div>
+          </section>
+
+          <section class="textarea-container">
+            <textarea
+              placeholder="name"
+              class="text"
+              rows="10"
+              cols="50"
+            ></textarea>
+            <label class="label">
+              <span class="span">comments</span>
+            </label>
+          </section>
+
+          <select id="dropdown" name="years" onclick="changeToBlue();">
+            <option disabled selected>current years of experience</option>
+            <option>less than 2 years</option>
+            <option>more than 2 but less than 5 years</option>
+            <option>more than 5 but less than 10 years </option>
+            <option>more than 10 years</option>
+          </select>
+
+          <section id="section-2">
+            <p>Membership we offer at our academy</p>
+
+            <div class="spacing">
+              <input type="radio" name="membership" id="year" value="yearly" />
+              <label class="inline" for="year">yearly</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="radio"
+                name="membership"
+                id="half-year"
+                value="half-yearly"
+              />
+              <label class="inline" for="half-year">half-year</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="radio"
+                name="membership"
+                id="quater"
+                value="quaterly"
+              />
+              <label class="inline" for="quater">quaterly</label>
+            </div>
+          </section>
+
+          <section id="section-3">
+            <p>skills we offer here at our academy</p>
+            <div class="spacing">
+              <input
+                type="checkbox"
+                name="whatMore"
+                id="rider-1"
+                value="rider-1"
+              />
+              <label class="inline" for="rider-1">rider-1</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="checkbox"
+                name="whatMore"
+                id="rider-2"
+                value="rider-2"
+              />
+              <label class="inline" for="rider-2">rider-2</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="checkbox"
+                name="whatMore"
+                id="rider-3"
+                value="rider-3"
+              />
+              <label class="inline" for="rider-3">rider-3</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="checkbox"
+                name="whatMore"
+                id="rider-4"
+                value="rider-4"
+              />
+              <label class="inline" for="rider-4">rider-4</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="checkbox"
+                name="whatMore"
+                id="rider-5"
+                value="rider-5"
+              />
+              <label class="inline" for="rider-5">rider-5</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="checkbox"
+                name="whatMore"
+                id="rider-6"
+                value="rider-6"
+              />
+              <label class="inline" for="rider-6">rider-6</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="checkbox"
+                name="whatMore"
+                id="rider-7"
+                value="rider-7"
+              />
+              <label class="inline" for="rider-7">rider-7</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="checkbox"
+                name="whatMore"
+                id="rider-8"
+                value="rider-8"
+              />
+              <label class="inline" for="rider-8">rider-8</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="checkbox"
+                name="whatMore"
+                id="rider-9"
+                value="rider-9"
+              />
+              <label class="inline" for="rider-9">rider-9</label>
+            </div>
+
+            <div class="spacing">
+              <input
+                type="checkbox"
+                name="whatMore"
+                id="rider-10"
+                value="rider-10"
+              />
+              <label class="inline" for="rider-10">rider-10</label>
+            </div>
+          </section>
+
+          <button id="submit" class="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <video autoplay muted loop id="Rolling-horse">
+      <source src="ocean.mp4" type="video/mp4" />
+    </video>
+  </body>
+  <script>
+    function changeToBlue() {
+      document.getElementById("dropdown").style.borderBottomColor = "#5fa8d3";
+    }
+  </script>
 </html>
